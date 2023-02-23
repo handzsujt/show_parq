@@ -1,0 +1,13 @@
+# build with python -m build
+[project]
+    name         = "show-parquet"
+    description  = "show parquet file"
+    version      = "0.0.1"
+    dependencies = ["pandas", "pyarrow", "pandastable"]
+
+[build-system]
+    requires      = ["setuptools"]
+    build-backend = "setuptools.build_meta"
+
+[project.gui-scripts]
+    show-parquet = "show_parq:main"
