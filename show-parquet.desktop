@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=show-parquet
+Terminal=false
+Exec=/home/handzsuj/.local/bin/show-parquet %f
+Comment=Show parquet file as table
