@@ -10,7 +10,7 @@ from netCDF4 import Dataset
 from pandastable import Table
 
 
-class TestApp(tk.Frame):
+class TableApp(tk.Frame):
     """show table"""
 
     def __init__(self, df, parent=None):
@@ -30,7 +30,15 @@ def main():
     if len(sys.argv) > 1:
         p = Path(sys.argv[1])
     else:
-        p = Path(askopenfilename())
+        p = askopenfilename()
+        if p:
+            p = Path(p)
+        else:
+            return
+
+    if not p.exists():
+        showwarning("Show Table", "File not found")
+        return
 
     if p.suffix in [".parq", ".parquet"]:
         df = pd.read_parquet(p)
@@ -50,9 +58,9 @@ def main():
         df = None
 
     if df is None:
-        showwarning("Show Table", "File not found or file type not supported")
+        showwarning("Show Table", "File type not supported")
     else:
-        app = TestApp(df)
+        app = TableApp(df)
         # launch the app
         app.mainloop()
 
