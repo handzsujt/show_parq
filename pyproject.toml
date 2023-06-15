@@ -2,8 +2,8 @@
 [project]
     name         = "show-parquet"
     description  = "show parquet file"
-    version      = "0.0.1"
-    dependencies = ["pandas", "pyarrow", "pandastable"]
+    version      = "0.2"
+    dependencies = ["netCDF4", "numpy", "pandas", "pandastable"]
 
 [build-system]
     requires      = ["setuptools"]
