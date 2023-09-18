@@ -22,8 +22,15 @@ class TableApp(tk.Frame):
         f = tk.Frame(self.main)
         f.pack(fill=tk.BOTH, expand=1)
         self.table = pt = Table(f, dataframe=df, showtoolbar=True, showstatusbar=True)
+        pt.showIndex()
         pt.show()
         return
+
+
+def show_table(df):
+    app = TableApp(df)
+    # launch the app
+    app.mainloop()
 
 
 def main():
