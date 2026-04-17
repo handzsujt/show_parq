@@ -57,7 +57,7 @@ def main():
             if np.ma.is_masked(data) and "float" in str(
                 data.dtype
             ):  # NaNs are masked in ncdf
-                d[name] = data.filled(np.NaN)
+                d[name] = data.filled(np.nan)
             else:
                 d[name] = data
         df = pd.DataFrame(d)
