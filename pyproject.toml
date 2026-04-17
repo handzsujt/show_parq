@@ -1,9 +1,10 @@
 # build with python -m build
 [project]
-    name         = "show-parquet"
-    description  = "show parquet file"
-    version      = "0.21"
-    dependencies = ["netCDF4", "numpy", "pandas", "pandastable", "pyarrow"]
+    name            = "show-parquet"
+    description     = "show parquet file"
+    version         = "0.21"
+    dependencies    = ["netCDF4", "numpy", "pandas", "pandastable", "pyarrow"]
+    requires-python = ">=3.12"
 
 [build-system]
     requires      = ["setuptools"]
@@ -11,3 +12,6 @@
 
 [project.gui-scripts]
     show-parquet = "show_parq:main"
+
+[tool.uv]
+    find-links = ["packages"]
