@@ -19,6 +19,3 @@
 
 [project.gui-scripts]
     show-parquet = "show_parq:main"
-
-[tool.uv]
-    find-links = ["packages"]
