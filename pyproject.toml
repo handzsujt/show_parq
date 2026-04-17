@@ -1,9 +1,16 @@
 # build with python -m build
 [project]
-    name            = "show-parquet"
-    description     = "show parquet file"
-    version         = "0.21"
-    dependencies    = ["netCDF4", "numpy", "pandas", "pandastable", "pyarrow"]
+    name = "show-parquet"
+    description = "show parquet file"
+    version = "0.22"
+    dependencies = [
+        "netCDF4",
+        "numpy",
+        "pandas",
+        "pandastable",
+        "pyarrow",
+        "pandastable @git+https://github.com/handzsujt/pandastable.git",
+    ]
     requires-python = ">=3.12"
 
 [build-system]
